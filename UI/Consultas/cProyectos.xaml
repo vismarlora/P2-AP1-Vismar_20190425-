@@ -37,7 +37,7 @@
 
                 </StackPanel>
 
-                <Button x:Name="BuscarButton" Margin="15,5,0,0" Height="35" Width="90" Click="BuscarButton_Click_2" >
+                <Button x:Name="BuscarButton" Margin="15,5,0,0" Height="35" Width="90" Click="BuscarButton_Click" >
                     <StackPanel Orientation="Horizontal" >
 
                         <Image Source="/Resources/search_icon-icons.com_74448.png" />

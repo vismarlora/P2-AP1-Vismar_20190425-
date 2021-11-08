@@ -63,6 +63,46 @@ namespace P2_AP1_Vismar_20190425.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] add_icon_icons_com_74429__1_ {
+            get {
+                object obj = ResourceManager.GetObject("add_icon_icons_com_74429__1_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] delete_delete_exit_1577 {
+            get {
+                object obj = ResourceManager.GetObject("delete_delete_exit_1577", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] new_25355 {
+            get {
+                object obj = ResourceManager.GetObject("new_25355", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Save_37110__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Save_37110__1_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] search_icon_icons_com_74448 {
             get {
                 object obj = ResourceManager.GetObject("search_icon_icons_com_74448", resourceCulture);

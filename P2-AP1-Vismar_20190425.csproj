@@ -8,10 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\add_icon-icons.com_74429 %281%29.png" />
+    <None Remove="Resources\delete_delete_exit_1577.png" />
+    <None Remove="Resources\new_25355.png" />
+    <None Remove="Resources\Save_37110 %281%29.png" />
     <None Remove="Resources\search_icon-icons.com_74448.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\add_icon-icons.com_74429 (1).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\delete_delete_exit_1577.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\new_25355.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Save_37110 (1).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\search_icon-icons.com_74448.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -19,7 +35,6 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="UI\Registros\" />
   </ItemGroup>
 
   <ItemGroup>

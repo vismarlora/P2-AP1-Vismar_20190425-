@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace P2_AP1_Vismar_20190425.UI.Consultas
+namespace P2_AP1_Vismar_20190425.UI.Registros
 {
     /// <summary>
-    /// Interaction logic for cProyectos.xaml
+    /// Interaction logic for rProyectos.xaml
     /// </summary>
-    public partial class cProyectos : Window
+    public partial class rProyectos : Window
     {
-        public cProyectos()
+        public rProyectos()
         {
             InitializeComponent();
-        }
-
-        private void BuscarButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

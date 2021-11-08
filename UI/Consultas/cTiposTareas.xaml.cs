@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace P2_AP1_Vismar_20190425.UI.Consultas
 {
     /// <summary>
-    /// Interaction logic for cProyectos.xaml
+    /// Interaction logic for cTiposTareas.xaml
     /// </summary>
-    public partial class cProyectos : Window
+    public partial class cTiposTareas : Window
     {
-        public cProyectos()
+        public cTiposTareas()
         {
             InitializeComponent();
         }
