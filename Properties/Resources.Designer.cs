@@ -59,5 +59,15 @@ namespace P2_AP1_Vismar_20190425.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] search_icon_icons_com_74448 {
+            get {
+                object obj = ResourceManager.GetObject("search_icon_icons_com_74448", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
