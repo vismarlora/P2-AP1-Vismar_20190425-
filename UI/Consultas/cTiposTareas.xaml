@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P2_AP1_Vismar_20190425.UI.Consultas"
         mc:Ignorable="d"
-        Title="cTiposTareas" Height="450" Width="800">
+        Title="Consulta de Tipos de Tareas" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,5,10,0">
             <StackPanel Orientation="Horizontal" Height="58">

@@ -9,7 +9,7 @@ using P2_AP1_Vismar_20190425.DAL;
 namespace P2_AP1_Vismar_20190425.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211109033320_Migracion_Inicial")]
+    [Migration("20211109035110_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
