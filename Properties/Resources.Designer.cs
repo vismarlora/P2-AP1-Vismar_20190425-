@@ -109,5 +109,15 @@ namespace P2_AP1_Vismar_20190425.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] trash_can_115312__3_ {
+            get {
+                object obj = ResourceManager.GetObject("trash_can_115312__3_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

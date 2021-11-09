@@ -12,7 +12,6 @@ namespace P2_AP1_Vismar_20190425.Entidades
     {
         [Key]
         public int Id { get; set; }
-        public int MyProperty { get; set; }
         public int ProyectoId { get; set; }
         public int TipoTareaId { get; set; }
         public string Requerimiento { get; set; }

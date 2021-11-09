@@ -17,7 +17,7 @@
                     <Button x:Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
                         <StackPanel Orientation='Horizontal'>
 
-                            <Image Source="/Resources/search_icon-icons.com_74448.png" />
+                            <Image Source="/Resources/search_icon-icons.com_74448.png" Width="25" />
 
 
                             <Label Content="Buscar"/>
@@ -39,7 +39,7 @@
                         <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
                             <StackPanel Margin="0,0,10,0">
                                 <Label Content="Tipo de Tarea"/>
-                                <ComboBox x:Name="TipoTareaComboBox" Width="150" SelectedValue="{Binding TiposTarea.TipoTareaId}" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                                <ComboBox x:Name="TipoTareaComboBox" Width="150" SelectedValue="{Binding TiposTareas.TipoTareaId}" HorizontalAlignment="Left" Margin="5,0,0,0"/>
                             </StackPanel>
                             <StackPanel Margin="5,0,10,0">
                                 <Label Content="Requerimiento de la tarea"/>
@@ -53,7 +53,7 @@
                                 <Button x:Name="AgregarButton" Click="AgregarButton_Click">
                                     <StackPanel Orientation="Horizontal">
 
-                                        <Image Source="/Resources/add_icon-icons.com_74429 (1).png" />
+                                        <Image Source="/Resources/add_icon-icons.com_74429 (1).png" Width="25" />
 
 
 
@@ -65,9 +65,9 @@
                         <StackPanel>
                             <DataGrid x:Name="DetalleDataGrid" Height="80" Width="600" ItemsSource="{Binding Detalle}"  HorizontalAlignment="Left" Margin="15,5,0,0" AutoGenerateColumns="False" >
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Tipo Id" Width="100" Binding="{Binding TiposTarea.TipoTareaId}"/>
+                                    <DataGridTextColumn Header="Tipo Id" Width="100" Binding="{Binding TiposTareas.TipoTareaId}"/>
 
-                                    <DataGridTextColumn Header="Tipo Tarea" Width="130" Binding="{Binding TiposTarea.DescripcionTipoTarea}"/>
+                                    <DataGridTextColumn Header="Tipo Tarea" Width="130" Binding="{Binding TiposTareas.DescripcionTipoTarea}"/>
 
                                     <DataGridTextColumn Header="Requerimiento" Width="150" Binding="{Binding Requerimiento}"/>
 
@@ -78,6 +78,12 @@
                         <StackPanel Height="38">
                             <Button x:Name="RemoverFilaButton" Width="100" HorizontalAlignment="Left" Margin="15,5,0,0" Click="RemoverFilaButton_Click">
                                 <StackPanel Orientation="Horizontal">
+
+
+                                    <Image Source="/Resources/trash-can_115312 (3).png" />
+
+
+
                                     <Label Content="Remover Fila"/>
                                 </StackPanel>
                             </Button>
@@ -98,7 +104,7 @@
                 <Button x:Name="GuardarButton" Margin="0,0" Click="GuardarButton_Click">
                     <StackPanel Orientation="Horizontal">
 
-                        <Image Source="/Resources/Save_37110 (1).png" />
+                        <Image Source="/Resources/Save_37110 (1).png" Width="25" />
 
 
                         <Label Content="Guardar" />
@@ -107,7 +113,7 @@
                 <Button x:Name="EliminarButton"  Margin="30,0" Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
 
-                        <Image Source="/Resources/delete_delete_exit_1577.png" />
+                        <Image Source="/Resources/delete_delete_exit_1577.png" Width="25" />
 
 
                         <Label Content="Eliminar" />

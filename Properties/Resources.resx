@@ -133,4 +133,7 @@
   <data name="search_icon_icons_com_74448" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_icon-icons.com_74448.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="trash_can_115312__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash-can_115312 (3).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P2_AP1_Vismar_20190425.BLL
 {
-    public class Utlidades
+    public class Utilidades
     {
         public static int ToInt(string valor)
         {

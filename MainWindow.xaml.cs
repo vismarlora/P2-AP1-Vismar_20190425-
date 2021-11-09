@@ -1,4 +1,6 @@
-﻿using System;
+﻿using P2_AP1_Vismar_20190425.UI.Consultas;
+using P2_AP1_Vismar_20190425.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace P2_AP1_Vismar_20190425
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ProyectosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rProyectos registro = new rProyectos();
+
+            registro.Show();
+        }
+
+        private void TiposTareasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cTiposTareas consulta = new cTiposTareas();
+
+            consulta.Show();
+        }
+
+        private void ProyectoConsultaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cProyectos proyecto = new cProyectos();
+
+            proyecto.Show();
         }
     }
 }

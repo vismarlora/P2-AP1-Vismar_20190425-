@@ -19,7 +19,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             else
                 return Modificar(proyecto);
         }
-
         private static bool Insertar(Proyectos proyecto)
         {
             bool paso = false;
@@ -33,9 +32,13 @@ namespace P2_AP1_Vismar_20190425.BLL
                 foreach (var detalle in proyecto.Detalle)
                 {
                     contexto.Entry(detalle).State = EntityState.Added;
+
                     contexto.Entry(detalle.TiposTareas).State = EntityState.Modified;
+
                     contexto.Entry(detalle.Proyecto).State = EntityState.Modified;
+
                     detalle.TiposTareas.TiempoAcumulado += detalle.Tiempo;
+
                     detalle.Proyecto.Total += detalle.Tiempo;
                 }
 
@@ -43,7 +46,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -51,9 +53,7 @@ namespace P2_AP1_Vismar_20190425.BLL
                 contexto.Dispose();
             }
             return paso;
-
         }
-
         private static bool Modificar(Proyectos proyecto)
         {
             bool paso = false;
@@ -62,21 +62,21 @@ namespace P2_AP1_Vismar_20190425.BLL
 
             try
             {
-                var ProyectoAnterior = contexto.Proyectos
+                var proyectoAnterior = contexto.Proyectos
                     .Where(x => x.ProyectoId == proyecto.ProyectoId)
                     .Include(x => x.Detalle)
                     .ThenInclude(x => x.TiposTareas)
                     .AsNoTracking()
                     .SingleOrDefault();
 
-                //foreach(var detalle in proyectoAnterior.Detalle)
-                //{
-                //    detalle.TiposTareas.TiempoAcumulado -= detalle.Tiempo;
+                foreach (var detalle in proyectoAnterior.Detalle)
+                {
+                    detalle.TiposTareas.TiempoAcumulado -= detalle.Tiempo;
 
-                //    detalle.Proyecto.Total -= detalle.Tiempo;
-                //}
+                    detalle.Proyecto.Total -= detalle.Tiempo;
+                }
 
-                contexto.Database.ExecuteSqlRaw($"DeleteFROM ProyectosDetalle Where Id={proyecto.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDetalle Where Id={proyecto.ProyectoId}");
 
                 foreach (var item in proyecto.Detalle)
                 {
@@ -92,11 +92,11 @@ namespace P2_AP1_Vismar_20190425.BLL
                 }
 
                 contexto.Entry(proyecto).State = EntityState.Modified;
+
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -105,7 +105,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             return paso;
         }
-
         public static Proyectos Buscar(int id)
         {
             Proyectos proyecto = new Proyectos();
@@ -116,13 +115,13 @@ namespace P2_AP1_Vismar_20190425.BLL
             {
                 proyecto = contexto.Proyectos.Include(x => x.Detalle)
                     .Where(x => x.ProyectoId == id)
-                    .Include(x => x.Detalle)
+                     .Include(x => x.Detalle)
                     .ThenInclude(x => x.TiposTareas)
                     .SingleOrDefault();
+
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -131,7 +130,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             return proyecto;
         }
-
         public static bool Eliminar(int id)
         {
             bool paso = false;
@@ -142,9 +140,9 @@ namespace P2_AP1_Vismar_20190425.BLL
             {
                 var proyecto = Buscar(id);
 
-                if(proyecto != null)
+                if (proyecto != null)
                 {
-                    foreach(var item in proyecto.Detalle)
+                    foreach (var item in proyecto.Detalle)
                     {
                         contexto.Entry(item.Proyecto).State = EntityState.Modified;
 
@@ -154,15 +152,14 @@ namespace P2_AP1_Vismar_20190425.BLL
 
                         item.Proyecto.Total -= item.Tiempo;
                     }
-
                     contexto.Proyectos.Remove(proyecto);
 
                     paso = contexto.SaveChanges() > 0;
                 }
+
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -171,7 +168,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             return paso;
         }
-
         public static List<Proyectos> GetList(Expression<Func<Proyectos, bool>> criterio)
         {
             List<Proyectos> Lista = new List<Proyectos>();
@@ -184,7 +180,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -193,7 +188,6 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             return Lista;
         }
-
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
@@ -206,13 +200,13 @@ namespace P2_AP1_Vismar_20190425.BLL
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
             {
                 contexto.Dispose();
             }
+
             return encontrado;
         }
 

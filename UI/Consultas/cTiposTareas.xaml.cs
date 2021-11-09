@@ -1,4 +1,6 @@
-﻿using System;
+﻿using P2_AP1_Vismar_20190425.BLL;
+using P2_AP1_Vismar_20190425.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +28,20 @@ namespace P2_AP1_Vismar_20190425.UI.Consultas
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            var listado = new List<TiposTareas>();
 
+            switch (FiltroComboBox.SelectedIndex)
+            {
+                case 0:
+
+                    listado = TiposTareasBLL.GetTiposTarea();
+
+                    break;
+            }
+
+            DatosDataGrid.ItemsSource = null;
+
+            DatosDataGrid.ItemsSource = listado;
         }
     }
 }
