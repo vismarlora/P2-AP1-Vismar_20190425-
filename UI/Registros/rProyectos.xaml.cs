@@ -40,6 +40,25 @@ namespace P2_AP1_Vismar_20190425.UI.Registros
             TotalTextBox.Text = "0";
         }
 
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = proyecto;
+        }
+        private void Limpiar()
+        {
+            this.proyecto = new Proyectos();
+
+            this.DataContext = proyecto;
+        }
+        
+        private bool ExisteEnLaBaseDeDatos()
+        {
+            Proyectos esValido = ProyectosBLL.Buscar(proyecto.ProyectoId);
+
+            return (esValido != null);
+        }
+
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -47,7 +66,18 @@ namespace P2_AP1_Vismar_20190425.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            Proyectos encontrado = ProyectosBLL.Buscar(proyecto.ProyectoId);
 
+            if (encontrado != null)
+            {
+                proyecto = encontrado;
+                Cargar();
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("El proyecto no se encuentra en la Base de Datos...", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
