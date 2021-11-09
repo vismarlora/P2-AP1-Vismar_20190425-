@@ -11,6 +11,8 @@ namespace P2_AP1_Vismar_20190425.DAL
     public class Contexto : DbContext
     {
         public DbSet<TiposTareas> TiposTareas { get; set; }
+
+        public DbSet<Proyectos> Proyectos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = DATA\P2-AP1_Vismar-20190425.db");
